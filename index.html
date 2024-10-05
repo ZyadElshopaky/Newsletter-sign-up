@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/Main.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <div class="conenir">
+    <div class="Sign-up">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li><img src="/assets/images/icon-list.svg" alt=""><p>Product discovery and building what matters</p></li>
+        <li><img src="/assets/images/icon-list.svg" alt=""><p>Measuring to ensure updates are a success</p></li>
+        <li><img src="/assets/images/icon-list.svg" alt=""><p>And much more!</p></li>
+      </ul>
+      <div>
+        <h3>Email address</h3>
+        <h3 class="masg">Valid email required</h3>
+      </div>
+      <form id="sign" method="get">
+        <input type="email" placeholder="email@company.com" pattern="(^[A-z0-9]+)@([A-z]+)(\.\w{2,6})" required>
+        <span class="msg"><h3>Valid email required</h3></span>
+        <input type="submit" class="btn" value="Subscribe to monthly newsletter">
+      </form>
+    </div>
+    <div class="imag">
+    </div>
+  </div>
+  <!-- Sign-up form end -->
+  <!-- Success message start -->
+    <div class="Sucess-message">
+      <img src="assets/images/icon-success.svg" alt="">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span>ash@loremcompany.com.</span>
+        Please open it and click the button inside to confirm your subscription.</p>
+      <input type="button" value="Dismiss message" class="btn">
+    </div>
+  <!-- Success message end -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Zyad Elshopaky</a>.
+  </div> -->
+  <script src="js/Main.js"></script>
+</body>
+</html>

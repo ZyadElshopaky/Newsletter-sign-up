@@ -1,0 +1,207 @@
+:root{
+  --Dark-Slate-Grey:hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 100%, 67%);
+  --Font-size-std: 16px;
+}
+@font-face{
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:"Roboto", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Charcoal-Grey);
+}
+@media (max-width:767px) {
+  body{
+    display: block;
+  }
+}
+.conenir{
+  margin-top: 20px;
+  width: 930px;
+  height: fit-content;
+  padding: 24px 24px;
+  padding-left: 64px;
+  background-color: var(--White);
+  border-radius: 36px;
+  display: flex;
+  gap:64px;
+  transition: .3s transform;
+}
+@media (max-width:767px) {
+  .conenir{
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 40px;
+    flex: 1;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+.imag{
+  background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+  width: 400px;
+  border-radius: 18px;
+}
+@media (max-width:767px) {
+  .imag{
+    background-image: url(/assets/images/illustration-sign-up-mobile.svg);
+    width: 100%;
+    height: 284px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 18px;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+  }
+}
+.Sign-up>h1{
+  margin-top: 75px;
+  font-size: 45px;
+  margin-bottom: 25px;
+  color: var(--Dark-Slate-Grey);
+  font-weight: bolder;
+}
+.Sign-up>ul{
+  margin-top: 25px;
+  margin-bottom: 40px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Sign-up>ul>li{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.Sign-up>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Sign-up>div>h3{
+  font-size: 15px;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 13px;
+}
+.Sign-up>div>h3:last-of-type{
+  color: var(--Tomato);
+  font-size: 13px;
+  display: none;
+}
+.Sign-up form{
+  position: relative;
+}
+.Sign-up input:first-child{
+  width: 100%;
+  padding: 24px;
+  border: 1px solid hsl(228deg 2.96% 66.86%);
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: var(--Font-size-std);
+  transition: .3s;
+}
+.Sign-up input::placeholder:first-child{
+  font-size: var(--Font-size-std);
+}
+.Sign-up input:user-invalid{
+  border: 1px solid var(--Tomato);
+  background-color: hsl(4.8deg 100% 95.1%);
+  color: var(--Tomato);
+}
+.Sign-up input:user-invalid+span{
+  display: block;
+  opacity: 1;
+}
+.Sign-up form>span{
+  position: absolute;
+  top: -30px;
+  right: 4px;
+  color: var(--Tomato);
+  font-size: 13px;
+  opacity: 0;
+  display: none;
+  transition: .3s;
+}
+.btn{
+  display: flex;
+  width: 100%;
+  background-color: var(--Dark-Slate-Grey);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--White);
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+.btn:hover{
+  background-image: linear-gradient(to right , hsl(346.4deg 98.85% 65.88%) , hsl(13.06deg 100% 62.16%));
+  box-shadow: -1px 5px 20px 0px var(--Tomato);
+}
+
+@media (max-width:767px) {
+  .Sign-up{
+    padding: 30px;
+    padding-bottom: 40px;
+    padding-top: 0;
+  }
+  .Sign-up>h1{
+    margin-top: 0;
+  }
+}
+/*Start Success message start */
+.Sucess-message{
+  max-width: 500px;
+  padding: 64px;
+  background-color: white;
+  border-radius: 40px;
+  transform: scale(0);
+  transition: .3s;
+  display: none;
+}
+.Sucess-message>img{
+  margin-bottom: 45px;
+}
+.Sucess-message>h1{
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.Sucess-message>p{
+  margin-bottom: 45px;
+  line-height: 1.5;
+}
+.Sucess-message>p>span{
+  font-weight: bold;
+}
+@media (max-width:767px) {
+  .Sucess-message{
+    border-radius: 0;
+    padding: 150px 25px 25px ;
+  }
+  /* .Sucess-message>img{
+    margin-bottom: 30px;
+  } */
+  .Sucess-message>.btn{
+    margin-top: 250px;
+  }
+}
+/* End Success message start */
